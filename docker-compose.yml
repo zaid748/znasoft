@@ -1,0 +1,8 @@
+services:
+  znasoft:
+    build: .
+    image: znasoft:local
+    container_name: znasoft
+    restart: unless-stopped
+    ports:
+      - "${ZNASOFT_PORT:-8080}:80"
